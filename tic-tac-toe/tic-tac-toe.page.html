@@ -1,0 +1,106 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Igra</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-grid>
+		<!-- 1. row-->
+		<ion-row>
+			<ion-col>
+
+				<ion-button class="btn" color="dark" (click)="narediPotezo(0,0)" *ngIf="board.board[0] == ''"></ion-button>
+
+				<ion-button class="btn" color="dark" *ngIf="board.board[0] != ''">{{board.board[0]}}</ion-button>
+
+			</ion-col>
+				
+			<ion-col>
+				<ion-button class="btn" color="dark" (click)="narediPotezo(1,0)" *ngIf="board.board[1] == ''"></ion-button>
+				<ion-button class="btn" color="dark" *ngIf="board.board[1] != ''">{{board.board[1]}}</ion-button>
+			</ion-col>
+
+			<ion-col>
+				<ion-button class="btn" color="dark" (click)="narediPotezo(2,0)" *ngIf="board.board[2] == ''"></ion-button>
+				<ion-button class="btn" color="dark" *ngIf="board.board[2] != ''">{{board.board[2]}}</ion-button>
+			</ion-col>
+		</ion-row>
+		<!-- 2. row-->
+		<ion-row>
+			<ion-col>
+				<ion-button class="btn" color="dark" (click)="narediPotezo(0,1)" *ngIf="board.board[3] == ''"></ion-button>
+				<ion-button class="btn" color="dark" *ngIf="board.board[3] != ''">{{board.board[3]}}</ion-button>
+			</ion-col>
+
+			<ion-col>
+				<ion-button class="btn" color="dark" (click)="narediPotezo(1,1)" *ngIf="board.board[4] == ''"></ion-button>
+				<ion-button class="btn" color="dark" *ngIf="board.board[4] != ''">{{board.board[4]}}</ion-button>
+			</ion-col>
+
+			<ion-col>
+				<ion-button class="btn" color="dark" (click)="narediPotezo(2,1)" *ngIf="board.board[5] == ''"></ion-button>
+				<ion-button class="btn" color="dark" *ngIf="board.board[5] != ''">{{board.board[5]}}</ion-button>
+			</ion-col>
+		</ion-row>
+		<!-- 3. row-->
+		<ion-row>
+			<ion-col>
+				<ion-button class="btn" color="dark" (click)="narediPotezo(0,2)" *ngIf="board.board[6] == ''"></ion-button>
+				<ion-button class="btn" color="dark" *ngIf="board.board[6] != ''">{{board.board[6]}}</ion-button>
+			</ion-col>
+
+			<ion-col>
+				<ion-button class="btn" color="dark" (click)="narediPotezo(1,2)" *ngIf="board.board[7] == ''"></ion-button>
+				<ion-button class="btn" color="dark" *ngIf="board.board[7] != ''">{{board.board[7]}}</ion-button>
+			</ion-col>
+
+			<ion-col>
+				<ion-button class="btn" color="dark" (click)="narediPotezo(2,2)" *ngIf="board.board[8] == ''"></ion-button>
+				<ion-button class="btn" color="dark" *ngIf="board.board[8] != ''">{{board.board[8]}}</ion-button>
+			</ion-col>
+		</ion-row>
+
+
+  		<!-- 4 vrstica -->
+		<ion-row justify-content-center align-items-center>
+			<ion-button color="danger" (click)="resetIgro()">RESET</ion-button>
+  		</ion-row>
+
+  		<!-- 5 vrstica -->
+  		<ion-row text-center class="stevec">
+
+  			<ion-col> 
+  				<ion-text color="primary">Zmage:</ion-text>
+  			</ion-col>
+
+  			<ion-col>
+  				Neodločeno:
+  			</ion-col>
+
+  			<ion-col> 
+  				<ion-text color="danger">Porazi:</ion-text>
+  			</ion-col>
+
+  		</ion-row>
+
+  		<!-- 6 vrstica -->
+  		<ion-row class="stevec" text-center>
+
+  			<ion-col> 
+  				{{zmaga}}
+  			</ion-col>
+
+  			<ion-col>
+  				{{neodloceno}}
+  			</ion-col>
+
+  			<ion-col> 
+  				{{poraz}}
+  			</ion-col>
+
+  		</ion-row>
+  		
+
+  	</ion-grid>
+</ion-content>
